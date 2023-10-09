@@ -1,9 +1,18 @@
 h1 {
-    font-weight: 300;
     font-family: "Times New Roman", sans-serif;
     text-align: center;
     }
-section {
-    margin: .5rem 0;
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+    margin: 0px 50px 50px 50px;
     padding: .5rem;
+    font-family: "Times New Roman", Arial;
+    background-color: lightgray;
   }
