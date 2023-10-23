@@ -8,13 +8,14 @@ header {
     background-color: #000000;
 }
 
-header .container {
+header .container, .container-fluid {
     margin:0;
     padding: 0;
 }
 
 .supplemental-info {
     background-color: darkgray;
+    color: black;
 }
 
 ul {
@@ -35,7 +36,7 @@ img {
 }
 
 main {
-    margin: 1rem;
+    margin: 1rem 0rem;
 }
 
 .card {
@@ -44,15 +45,29 @@ main {
 }
 
 table {
+    margin-top: 2rem;
     width: 100%;
     border-collapse: collapse;
     color:black;
 }
 
+th, td {
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
 thead {
-    background-color:rgb(160, 160, 160);;
+    background-color:#ddd;
 }
 
 table tr:nth-child(even) {
-    background-color: rgb(160, 160, 160);
+    background-color: #ddd;
+}
+
+.home-button {
+    position: absolute;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    bottom: 0;
+    left: 0;
 }
