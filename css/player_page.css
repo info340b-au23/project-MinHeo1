@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* jumbotron color */
+header {
+    color: rgb(220, 220, 220);
+    background-color: #000000;
+}
+
+header .container {
+    margin:0;
+    padding: 0;
+}
+
+.supplemental-info {
+    background-color: darkgray;
+}
+
+ul {
+    list-style: none; 
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    display: inline; 
+    margin-right: 3rem; 
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+main {
+    margin: 1rem;
+}
+
+.card {
+    border-radius: 0px;
+    border: 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color:black;
+}
+
+thead {
+    background-color:rgb(160, 160, 160);;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(160, 160, 160);
+}
