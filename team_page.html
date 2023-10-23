@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="author" content="INFO 340 project group: Min Heo, Jinsu Jang, Oscar Maldonado, Alexander Evans">
     <meta name="description" content="NFL Team's Page">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>NFL Teams</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <link rel="stylesheet" href="css/proposal.css">
@@ -14,11 +13,12 @@
         <main>
             <div class="container">
                 <section class="navbar">
-                    <nav>
-                        <ul>
+                    <nav id="main_nav">
+                        <ul>                   
                           <li><a href="#Teams">Teams</a></li>
                           <li><a href="#Players">Players</a></li>
                           <li><a href="#Fantasy">Fantasy</a></li>
+                          <li><a href="#Home">Home</a></li>
                         </ul>
                     </nav>
                 </section>
@@ -32,7 +32,60 @@
                     </section>        
                 </div>
             </div>
+            <div class="container">
+                <h1>Seattle Seahawks</h1>
+                <img src="img/seahawks.jpg" alt="seattle seahawksa">
+                <nav id="overview">
+                    <ul class="team-overview">
+                        <a href="#overview">Overview</a>
+                        <a href="#roster">Roster</a>
+                    </ul>
+                </nav>
+            </div>
+            <section>
+                <div class="overview-card">
+                    <section id="overview">
+                        <h2>Team Overview</h2>
+                        <p>Team Name: Seahawks</p>
+                        <p>Founded: 1976</p>
+                        <p>City: Seattle</p>
+                        <p>Stadium: Lumen Field</p>
+                        <p>Head Coach: Pete Carroll</p>
+                    </section>
+                </div>
+            </section>
+            <section class="column">
+                <h2>Roster</h2>
+                    <div class="player-container">
+                        <div class="player">
+                            <a href="#geno"><img src="img/geno.jpeg" alt="geno smith"></a>
+                            <p>Seahawks QB: Geno Smith</p>    
+                        </div>
+                        <div class="player">
+                            <a href="#dk"><img src="img/dk.jpeg" alt="dk metcalf"></a>
+                            <p>Seahawks WR: DK Metcalf</p>
+                        </div>
+                        <div class="player">
+                            <a href="#tyler"><img src="img/tyler.jpeg" alt="tyler lockett"></a>
+                            <p>Seahawks WR: Tyler Lockett</p>    
+                        </div>
+                        <div class="player">
+                            <a href="#jamal"><img src="img/jamal.jpeg" alt="jamal adams"></a>
+                            <p>Seahawks SS: Jamal Adams</p>    
+                        </div>
+                    </div>
+            </section>
         </main>
     </div>
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2023 Fantasy Football</p>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+    </footer>
 </body>
 </html>
