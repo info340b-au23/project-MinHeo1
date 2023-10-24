@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="INFO 340 project group: Min Heo, Jinsu Jang, Oscar Maldonado, Alexander Evans">
     <meta name="description" content="All NFL Active Players Page">
 
@@ -12,16 +12,27 @@
     <title>NFL Players</title>
 </head>
 <body>
-   <section class="navbar">
-      <nav id="main_nav">
-          <ul>                   
-            <li><a href="#Teams">Teams</a></li>
-            <li><a href="#Players">Players</a></li>
-            <li><a href="#Fantasy">Fantasy</a></li>
-            <li><a href="#Home">Home</a></li>
-          </ul>
-      </nav>
-  </section>
+   <div class="container">
+      <section class="navbar">
+          <nav id="main_nav">
+              <ul>                   
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Players">Players</a></li>
+                <li><a href="#Fantasy">Fantasy</a></li>
+                <li><a href="#Teams">Teams</a></li>
+              </ul>
+          </nav>
+      </section>
+      <!--search bar built with help from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/ -->
+      <div class="searchbar">
+          <section class="search">
+              <form id="search"> 
+                  <input type="search" id="navbar" name="nav" placeholder="input team or player...">
+                  <button>Search</button>
+              </form>  
+          </section>        
+      </div>
+   </div>
     <header class="filter-section">
         <h1>All Players</h1>
         <form id="search-form">

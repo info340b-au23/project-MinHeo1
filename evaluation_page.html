@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
     <title>Player Comparison</title>
     <style>
@@ -22,18 +22,29 @@
 </head>
 
 <body>
-   <section class="navbar">
-      <nav id="main_nav">
-          <ul>                   
-            <li><a href="#Teams">Teams</a></li>
-            <li><a href="#Players">Players</a></li>
-            <li><a href="#Fantasy">Fantasy</a></li>
-            <li><a href="#Home">Home</a></li>
-          </ul>
-      </nav>
-  </section>
+   <div class="container">
+      <section class="navbar">
+          <nav id="main_nav">
+              <ul>                   
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Players">Players</a></li>
+                <li><a href="#Fantasy">Fantasy</a></li>
+                <li><a href="#Teams">Teams</a></li>
+              </ul>
+          </nav>
+      </section>
+      <!--search bar built with help from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/ -->
+      <div class="searchbar">
+          <section class="search">
+              <form id="search"> 
+                  <input type="search" id="navbar" name="nav" placeholder="input team or player...">
+                  <button>Search</button>
+              </form>  
+          </section>        
+      </div>
+   </div>
     <!-- Player comparison section -->
-    <div>
+      <div>
         <h2>Compare Players:</h2>
         <select id="player1Dropdown">
             <option value="">Choose the rank of the player to evaluate</option>
@@ -44,7 +55,7 @@
         <button onclick="comparePlayers()">Compare</button>
     
         <div id="comparisonResult"></div>
-    </div>
+      </div>
 
     <!-- Table with players -->
     <div class="sr_share_wrap" style="overflow:auto">

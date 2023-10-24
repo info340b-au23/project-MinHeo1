@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Fantasy Football 2023</title>
 </head>
 <body>
   <header>
-    <section class="navbar">
-      <nav id="main_nav">
-          <ul>                   
-            <li><a href="#Teams">Teams</a></li>
-            <li><a href="#Players">Players</a></li>
-            <li><a href="#Fantasy">Fantasy</a></li>
-            <li><a href="#Home">Home</a></li>
-          </ul>
-      </nav>
-  </section>
+    <div class="container">
+      <section class="navbar">
+          <nav id="main_nav">
+              <ul>                   
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Players">Players</a></li>
+                <li><a href="#Fantasy">Fantasy</a></li>
+                <li><a href="#Teams">Teams</a></li>
+              </ul>
+          </nav>
+      </section>
+      <!--search bar built with help from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/ -->
+      <div class="searchbar">
+          <section class="search">
+              <form id="search"> 
+                  <input type="search" id="navbar" name="nav" placeholder="input team or player...">
+                  <button>Search</button>
+              </form>  
+          </section>        
+      </div>
+    </div>
     <div class="header-content">
       <h1>Welcome to Fantasy Football 2023</h1>
       <p>This is where your fantasy team dreams come to life!</p>
