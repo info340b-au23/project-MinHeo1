@@ -39,11 +39,20 @@ ul {
     padding: 10px 0;
 }
 
+p {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
+}
+
+a.read-more-button {
+    color: blue
 }
 
 table {
@@ -65,6 +74,7 @@ thead {
 table tr:nth-child(even) {
     background-color: #ddd;
 }
+
 header {
     padding-left: 1rem;
     padding-bottom: 1rem;
@@ -79,6 +89,7 @@ button {
     font-size: 16px;
     border-radius: 8px;
     border: none;
+    text-align: center;
 }
 
 button:hover {
@@ -89,6 +100,10 @@ button:hover {
     position: relative;
     display: inline-block;
 }
+
+.registration-form {
+    text-align: center;
+  }
 
 .dropdown-content {
     display: none;
@@ -119,7 +134,39 @@ img {
     padding: 1em;
   }
 
+  section.news{
+    text-align: center;
+  }
+
   div.overview-card {
+    text-align: center;
+  }
+
+  div.player-card {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  article.news-item {
+    flex: 0 0 250px;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+  }
+
+  section.team-spotlight {
+    flex: 0 0 250px;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+    text-align: center;
+  }
+
+  section.test-your-knowledge {
     text-align: center;
   }
 
@@ -141,6 +188,10 @@ img {
     padding: 0.5rem 1rem;
   }
 
+  div.header-content {
+    text-align: center;
+  }
+
   div.player img {
     border-radius: 10px 10px 0 0;
   }
@@ -149,7 +200,7 @@ img {
     text-align: right;
   }
 
-  @media (max-width: 598px) {
+@media (max-width: 598px) {
     nav {
         display: none;
     }

@@ -11,20 +11,25 @@
 <body>
   <header>
     <section class="navbar">
-      <nav id="main_nav">
+      <nav class="main_nav">
           <ul>                   
             <li><a href="#Teams">Teams</a></li>
             <li><a href="#Players">Players</a></li>
             <li><a href="#Fantasy">Fantasy</a></li>
-            <li><a href="#Home">Home</a></li>
           </ul>
       </nav>
-  </section>
+    </section>
+    <div class="searchbar">
+        <form id="search"> 
+            <input type="search" id="navbar" name="nav" placeholder="Input team or player...">
+            <button>Search</button>
+        </form>  
+    </div>
     <div class="header-content">
       <h1>Welcome to Fantasy Football 2023</h1>
       <p>This is where your fantasy team dreams come to life!</p>
-      <a href="#get-started" class="cta-button">Get Started</a>
-    </div>
+      <a href="#registration-form" class="cta-button">Get Started</a>
+    </div>    
   </header>
   <main>
     <section class="intro">
@@ -33,58 +38,43 @@
     </section>
     <section class="player-spotlight">
       <h2>Top Players</h2>
-      <div class="player-card">
-        <!-- Player 1 -->
-        <div class="player-info">
-          <img src="player_image1.jpg" alt="Player">
-          <h3>Player Name 1</h3>
+      <div class="player-container">
+        <div class="player">
+            <a href="#geno"><img src="img/geno.jpeg" alt="geno smith"></a>
+            <p>Seahawks QB: Geno Smith</p>    
         </div>
-        <!-- Player 2 -->
-        <div class="player-info">
-          <img src="player_image2.jpg" alt="Player">
-          <h3>Player Name 2</h3>
+        <div class="player">
+            <a href="player_page.html"><img src="img/dk.jpeg" alt="dk metcalf"></a>
+            <p>Seahawks WR: DK Metcalf</p>
         </div>
-        <!-- Player 3 -->
-        <div class="player-info">
-          <img src="player_image3.jpg" alt="Player">
-          <h3>Player Name 3</h3>
+        <div class="player">
+            <a href="#tyler"><img src="img/tyler.jpeg" alt="tyler lockett"></a>
+            <p>Seahawks WR: Tyler Lockett</p>    
         </div>
-        <!-- Player 4 -->
-        <div class="player-info">
-          <img src="player_image4.jpg" alt="Player">
-          <h3>Player Name 4</h3>
+        <div class="player">
+            <a href="#jamal"><img src="img/jamal.jpeg" alt="jamal adams"></a>
+            <p>Seahawks SS: Jamal Adams</p>    
         </div>
-      </div>
     </section>
     <section class="news">
       <h2>Latest News and Updates</h2>
       <article class="news-item">
-        <img src="news_image.jpg" alt="News">
-        <h3>News Title 1</h3>
+        <img src="img/DKNews.jpeg" alt="News">
+        <h3>DK Metcalf Down With Injury</h3>
         <p>Get the latest insights into your favorite teams and players.</p>
-        <a href="#" class="read-more-button">Read More</a>
+        <a href="https://www.usatoday.com/story/sports/nfl/seahawks/2023/10/22/seahawks-dk-metcalf-missing-first-career-nfl-game/71283276007/?utm_source=FOX_Sports" class="read-more-button">Read More</a>
       </article>
-    </section>
-    <section class="test-your-knowledge">
-      <h2>Test Your Football Knowledge</h2>
-      <p>Think you know football? Take our quiz and prove it!</p>
-      <a href="#quiz" class="cta-button">Take the Quiz</a>
     </section>
     <section class="team-spotlight">
       <h2>Team Spotlight</h2>
       <div class="team-card">
         <div class="team-info">
-          <img src="team_image.jpg" alt="Team">
-          <h3>Team Name 1</h3>
+          <a href="team_page.html"><img src="img/seahawks.jpg" alt="Team"></a>
+          <h3>Seattle Seahawks</h3>
         </div>
       </div>
     </section>
   </main>
-  <section id="get-started" class="get-started">
-    <h2>Get Started Today</h2>
-    <p>Join the excitement of Fantasy Football 2023 now!</p>
-    <a href="#registration-form" class="cta-button">Create Your Team</a>
-  </section>
   <section id="registration-form" class="registration-form">
     <h2>Create Your Fantasy Team</h2>
     <p>Sign up and build your dream team in minutes.</p>
