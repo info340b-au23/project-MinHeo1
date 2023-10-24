@@ -148,3 +148,41 @@ img {
   div.searchbar {
     text-align: right;
   }
+
+  @media (max-width: 598px) {
+    nav {
+        display: none;
+    }
+    body {
+        font-size: 10px;
+        color: white;
+        background-color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        height: 100%;
+    }
+    body {
+        font-size: 20px;
+    }
+    nav {
+        display: block;
+    }
+    main {
+        text-shadow: 1px 1px #153c43;
+    }
+}
+
+@media (max-width: 992px) {
+    nav a {
+        font-size: 1.5rem;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+}
