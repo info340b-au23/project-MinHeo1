@@ -1,3 +1,50 @@
+h1 {
+    font-family: "Times New Roman", sans-serif;
+    text-align: center;
+    }
+
+h2 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+    margin: 0px 50px 50px 50px;
+    padding: .5rem;
+    font-family: "Times New Roman", Arial;
+    background-color: lightgray;
+  }
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav.main_nav {
+    background-color: black;
+    text-align: center; 
+}
+
+ul {
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 table {
     margin-top: 2rem;
@@ -66,3 +113,38 @@ img {
     max-width: 200px;
     max-height: 200px;
 }
+
+  section.column {
+    flex: 1;
+    padding: 1em;
+  }
+
+  div.overview-card {
+    text-align: center;
+  }
+
+  div.player-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  div.player {
+    flex: 0 0 250px;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+  }
+
+  div.player p {
+    padding: 0.5rem 1rem;
+  }
+
+  div.player img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  div.searchbar {
+    text-align: right;
+  }
