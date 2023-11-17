@@ -1,5 +1,6 @@
 import React from 'react'; 
 import PlayerList from './PlayerList';
+import TeamInfo from './TeamInfo';
 
 function App() {
     const teamData = {
@@ -15,5 +16,6 @@ function App() {
       </div>
     );
   }
+  
 export default App;
   

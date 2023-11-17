@@ -14,3 +14,5 @@ function Dropdown({ options, onSelect, label }) {
     </div>
   );
 }
+
+export default Dropdown;

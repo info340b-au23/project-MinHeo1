@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayerCard from './PlayerCard';
+import TeamInfo from './TeamInfo'
 
 const players = [
   { id: 1, name: 'DK Metcalf', position: 'WR', team: 'Seahawks'},
