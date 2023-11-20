@@ -25,7 +25,7 @@
 <body>
 
     <!-- Player comparison section -->
-    <div>
+    <div aria-label="player comparison">
       <div class="container">
          <section class="navbar">
              <nav id="main_nav">
@@ -36,11 +36,11 @@
                  </ul>
              </nav>
          </section>
-        <h2>Compare Players:</h2>
-        <select id="player1Dropdown">
+        <h2 aria-label="compare players">Compare Players:</h2>
+        <select id="player1Dropdown" aria-label="player dropdown">
             <option value="">Choose the rank of the player to evaluate</option>
         </select>
-        <select id="player2Dropdown">
+        <select id="player2Dropdown" aria-label="player dropdown">
             <option value="">Choose the rank of the player to evaluate</option>
         </select>
         <button onclick="comparePlayers()">Compare</button>
@@ -51,10 +51,11 @@
    
 
     <!-- Table with players -->
-    <div class="sr_share_wrap" style="overflow:auto">
+    <div class="sr_share_wrap" style="overflow:auto" aria-label="table with playeres">
         <table class="sr_share" id="playersTable",2" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;">
             <caption>Fantasy Rankings Table</caption>
            <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col class="sort_col"><col><col></colgroup>
+           <!-- Data gathered from: https://www.pro-football-reference.com/players/-->
            <thead>
               <tr>
                  <th colspan="3" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;"></th><th style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;"></th><th style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;"></th>

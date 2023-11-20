@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <header class="container-fluid bg-black">
+  <header class="container-fluid bg-black" aria-label="header">
     <div class="container">
-      <section class="navbar">
+      <section class="navbar" aria-label="navbar">
           <nav id="main_nav">
               <ul>                   
                 <li><a href="index.html">Home</a></li>
@@ -24,7 +24,7 @@
           </nav>
       </section>
       <!--search bar built with help from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/ -->
-      <div class="searchbar">
+      <div class="searchbar" aria-label="searchbar">
           <section class="search">
               <form id="search"> 
                   <input type="search" id="navbar" name="nav" placeholder="input team or player...">
@@ -33,7 +33,7 @@
           </section>        
       </div>
     </div>
-    <section class="player-banner">
+    <section class="player-banner" aria-label="player banner">
       <div class="container d-flex">
         <div class="row">
           <div class="col-xs-6 ps-0">
@@ -56,7 +56,7 @@
       </div>
     </section>
 
-    <section class="supplemental-info">
+    <section class="supplemental-info" aria-label="extra information">
       <ul>
         <li>Status: Inactive</li>
         <li>Total Points: 56.8</li>
@@ -66,7 +66,7 @@
   </header>
 
   <main>
-    <section class="player-statistics">
+    <section class="player-statistics" aria-label="player stats">
       <table>
         <thead>
           <tr>
@@ -112,7 +112,7 @@
   </main>
 
   <footer>
-    <div class="footer-content">
+    <div class="footer-content" aria-label="footer">
       <p>&copy; 2023 Fantasy Football</p>
       <ul>
         <li><a href="#">Privacy Policy</a></li>
