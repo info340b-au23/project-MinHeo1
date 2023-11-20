@@ -1,10 +1,20 @@
 h1 {
     font-family: "Times New Roman", sans-serif;
     text-align: center;
+    color: white;
     }
+
+h1.team {
+    color: black;
+}
+
+h1.filter {
+    color: black;
+}
 
 h2 {
     text-align: center;
+    color: #555;
 }
 
 img {
@@ -51,8 +61,16 @@ a {
     text-align: center;
 }
 
+a.standing {
+    color:black;
+}
+
 a.read-more-button {
     color: blue
+}
+
+a:hover {
+    color: #ffcc00; 
 }
 
 table {
@@ -62,9 +80,18 @@ table {
     color:black;
 }
 
-th, td {
+td {
     padding: 0.5rem;
     padding-left: 1rem;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+th {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border: 1px solid #ddd;
+    color: black; 
 }
 
 thead {
@@ -72,7 +99,11 @@ thead {
 }
 
 table tr:nth-child(even) {
-    background-color: #ddd;
+    background-color: red;
+}
+
+table tr:nth-child(odd) {
+    background-color: blue;
 }
 
 header {
@@ -80,6 +111,10 @@ header {
     padding-bottom: 1rem;
     color: white;
     background-color: black;
+}
+
+header.filter-section {
+    background-color: lightgray;
 }
 
 button {
@@ -90,10 +125,12 @@ button {
     border-radius: 8px;
     border: none;
     text-align: center;
+    cursor: pointer;
 }
 
 button:hover {
     color: deepskyblue;
+    background-color: #0056b3;
 }
 
 .dropdown {
@@ -147,6 +184,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #f8f9fa;
   }
 
   article.news-item {
@@ -199,6 +237,7 @@ img {
   div.searchbar {
     text-align: right;
   }
+
 
 @media (max-width: 598px) {
     nav {

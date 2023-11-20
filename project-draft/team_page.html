@@ -12,7 +12,7 @@
 <body>
     <div class="main-container">
         <main>
-            <div class="container">
+            <div class="container" aria-label="navigation">
                 <section class="navbar">
                     <nav id="main_nav">
                         <ul>                   
@@ -32,12 +32,12 @@
                     </section>        
                 </div>
             </div>
-            <div class="container">
-                <h1>Seattle Seahawks</h1>
-                <img src="img/seahawks.jpg" alt="seattle seahawks">
+            <div class="container" aria-label="team name">
+                <h1 class="team">Seattle Seahawks</h1>
+                <img src="img/seahawks.jpg" alt="seattle seahawksa">
             </div>
             <section>
-                <div class="overview-card">
+                <div class="overview-card" aria-label="overview of team">
                     <section id="overview">
                         <h2>Team Overview</h2>
                         <p>Team Name: Seahawks</p>
@@ -45,13 +45,13 @@
                         <p>City: Seattle</p>
                         <p>Stadium: Lumen Field</p>
                         <p>Head Coach: Pete Carroll</p>
-                        <p>Current Standing: <a href="https://www.google.com/search?q=seahawks&oq=seahawks&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEAAYgwEYsQMYgAQyDQgHEAAYgwEYsQMYgAQyDQgIEAAYgwEYsQMYgAQyCggJEAAYsQMYgATSAQgxNjUwajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#sie=t;/m/070xg;6;/m/059yj;st;fp;1;;;">2nd in NFC West</a></p>
+                        <p>Current Standing: <a class="standing" href="https://www.google.com/search?q=seahawks&oq=seahawks&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEAAYgwEYsQMYgAQyDQgHEAAYgwEYsQMYgAQyDQgIEAAYgwEYsQMYgAQyCggJEAAYsQMYgATSAQgxNjUwajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#sie=t;/m/070xg;6;/m/059yj;st;fp;1;;;">2nd in NFC West</a></p>
                     </section>
                 </div>
             </section>
-            <section class="column">
-                <h2>Roster</h2>
-                    <div class="player-container">
+            <section class="column" aria-label="players">
+                <h2 aria-label="roster">Roster</h2>
+                    <div class="player-container" aria-label="pictures of players">
                         <div class="player">
                             <a href="#geno"><img src="img/geno.jpeg" alt="geno smith"></a>
                             <p>Seahawks QB: Geno Smith</p>    
@@ -72,7 +72,7 @@
             </section>
         </main>
     </div>
-    <footer>
+    <footer aria-label="footer">
         <div class="footer-content">
           <p>&copy; 2023 Fantasy Football</p>
           <ul>
