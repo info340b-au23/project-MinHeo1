@@ -1,7 +1,6 @@
 import React from 'react'; 
 import PlayerList from './PlayerList';
 import TeamInfo from './TeamInfo';
-import './style.css';
 
 function App() {
     const teamData = {

@@ -1,0 +1,239 @@
+h1 {
+    font-family: "Times New Roman", sans-serif;
+    text-align: center;
+    }
+
+h2 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+    margin: 0px 50px 50px 50px;
+    padding: .5rem;
+    font-family: "Times New Roman", Arial;
+    background-color: lightgray;
+  }
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav.main_nav {
+    background-color: black;
+    text-align: center; 
+}
+
+ul {
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+a.read-more-button {
+    color: blue
+}
+
+table {
+    margin-top: 2rem;
+    width: 100%;
+    border-collapse: collapse;
+    color:black;
+}
+
+th, td {
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+thead {
+    background-color:#ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+header {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    background-color: black;
+}
+
+button {
+    color: rgb(0, 0, 0);
+    background-color: rgb(198, 198, 198);
+    padding: 0.5rem;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+}
+
+button:hover {
+    color: deepskyblue;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.registration-form {
+    text-align: center;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(198, 198, 198);
+    border-radius: 8px;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content button {
+    border: none;
+    border-radius:0px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+  section.column {
+    flex: 1;
+    padding: 1em;
+  }
+
+  section.news{
+    text-align: center;
+  }
+
+  div.overview-card {
+    text-align: center;
+  }
+
+  div.player-card {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  article.news-item {
+    flex: 0 0 250px;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+  }
+
+  section.team-spotlight {
+    flex: 0 0 250px;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+    text-align: center;
+  }
+
+  section.test-your-knowledge {
+    text-align: center;
+  }
+
+  div.player-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  div.player {
+    flex: 0 0 250px;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+  }
+
+  div.player p {
+    padding: 0.5rem 1rem;
+  }
+
+  div.header-content {
+    text-align: center;
+  }
+
+  div.player img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  div.searchbar {
+    text-align: right;
+  }
+
+@media (max-width: 598px) {
+    nav {
+        display: none;
+    }
+    body {
+        font-size: 10px;
+        color: white;
+        background-color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        height: 100%;
+    }
+    body {
+        font-size: 20px;
+    }
+    nav {
+        display: block;
+    }
+    main {
+        text-shadow: 1px 1px #153c43;
+    }
+}
+
+@media (max-width: 992px) {
+    nav a {
+        font-size: 1.5rem;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+}
