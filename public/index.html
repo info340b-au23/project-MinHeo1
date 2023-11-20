@@ -29,6 +29,28 @@
     <title>React App</title>
   </head>
   <body>
+    <header aria-label="navigation">
+      <section class="navbar">
+        <nav class="main_nav">
+            <ul>                   
+              <li><a href="">Players</a></li>
+              <li><a href="">Fantasy</a></li>
+              <li><a href="">Teams</a></li>
+            </ul>
+        </nav>
+      </section>
+      <div class="searchbar">
+          <form id="search"> 
+              <input type="search" id="navbar" name="nav" placeholder="Input team or player...">
+              <button>Search</button>
+          </form>  
+      </div>
+      <div class="header-content" aria-label="header">
+        <h1 aria-label="welcome to fantasy football">Welcome to Fantasy Football 2023</h1>
+        <p aria-label="motto">This is where your fantasy team dreams come to life!</p>
+        <a href="#registration-form" class="cta-button" aria-label="registration">Get Started</a>
+      </div>    
+    </header>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
