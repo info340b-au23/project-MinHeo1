@@ -1,6 +1,7 @@
 import React from 'react'; 
 import PlayerList from './PlayerList';
 import TeamInfo from './TeamInfo';
+import Sort from './Sort';
 
 function App() {
     const teamData = {
@@ -13,6 +14,7 @@ function App() {
         <h1>Fantasy Football</h1>
         <TeamInfo {...teamData} />
         <PlayerList />
+        <Sort data={data} />
       </div>
     );
   }
