@@ -7,23 +7,25 @@ function Sort(props) {
   const [sortByCriteria, setCriteria] = useState(null);
 
   const sortedData = _.sortBy(props.data, sortByCriteria);
-  if ((isAscending !== null && isAscending ===  false)) {
+  if ((isAscending !== null && isAscending === false)) {
     _.reverse(sortedData);
   }
 
- const statRows = props.data.map((jsonObj, index) => {
+  const headers = Object.keys(props.data[0]);
+  const statRows = props.data.map((jsonObj, index) => {
   return <tr><StatRow statObj={jsonObj} key={index} /></tr>
  })
 
-  const headerMap = props.data.map((key, index) => {
+  const headerMap = headers.map((jsonKey, index) => {
+    console.log(jsonKey);
     return (
       <>
         <th>
           <SortButton 
             onClick={SortButtonHanler}
             key={index}
-            name={key.Player}
-            ascending={sortByCriteria === key.Player && isAscending}
+            header={jsonKey}
+            ascending={sortByCriteria === jsonKey.Player && isAscending}
           />
         </th>
       </>
@@ -61,17 +63,38 @@ function Sort(props) {
 
 function SortButton(props) {
   return (
-    <button className="btn btn-sm btn-sort" name={props.name} onClick={props.onClick}>
-    <span aria-label={`sort by ${props.name}`}>sort</span>
+    <button className="btn btn-sm btn-sort" name={props.header} onClick={props.onClick}>
+    <span aria-label={`sort by ${props.header}`}>{props.header}</span>
     </button>
   );
 }
 
+// function StatRow(statObj) {
+//   const statArray = [];
+//   for (const stat in statObj) {
+//     statArray.push(<td key={stat}>{statObj[stat]}</td>);
+//   }
+//   return statArray;
+// }
+
 function StatRow(statObj) {
-  const statArray = []
-  for(const stat in statObj) {
-    statArray.push(<td>{stat}</td>);
-  }
+  const renderStat = (statObj) => {
+    return Object.entries(statObj).map(([key, value]) => {
+      if (typeof value === 'object') {
+        // If the value is an object, recursively render its contents
+        return (
+          <React.Fragment key={key}>
+            <td key={key}>{renderStat(value)}</td>
+          </React.Fragment>
+        );
+      } else {
+        // If the value is not an object, render a single <td>
+        return <td key={key}>{value}</td>;
+      }
+    });
+  };
+
+  return renderStat(statObj);
 }
 
 
