@@ -83,7 +83,7 @@ function StatRow(statObj) {
       if (typeof value === 'object') {
         // If the value is an object, recursively render its contents
         return (
-          <td key={key}>{renderStat(value)}</td>
+          renderStat(value)
         );
       } else {
         // If the value is not an object, render a single <td>
