@@ -15,7 +15,7 @@ function Sort(props) {
   return <tr><StatRow statObj={jsonObj} key={index} /></tr>
  })
 
-  const headerMap = jsonKeys.map((key, index) => {
+  const headerMap = props.data.map((key, index) => {
     return (
       <>
         <th>
@@ -37,10 +37,10 @@ function Sort(props) {
           <tr>
             {headerMap}
           </tr>
-          <tbody>
-            <StatRows />
-          </tbody>
         </thead>
+          <tbody>
+            {statRows}
+          </tbody>
       </table>
     </>
   );
