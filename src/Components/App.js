@@ -2,6 +2,10 @@ import React from 'react';
 import PlayerList from './PlayerList';
 import TeamInfo from './TeamInfo';
 import Sort from './Sort';
+import data from '../data/fantasy.json';
+
+
+
 
 function App() {
     const teamData = {
