@@ -83,9 +83,7 @@ function StatRow(statObj) {
       if (typeof value === 'object') {
         // If the value is an object, recursively render its contents
         return (
-          <React.Fragment key={key}>
-            <td key={key}>{renderStat(value)}</td>
-          </React.Fragment>
+          <td key={key}>{renderStat(value)}</td>
         );
       } else {
         // If the value is not an object, render a single <td>
