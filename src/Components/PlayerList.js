@@ -8,7 +8,7 @@ const players = [
   { id: 3, name: 'Tyler Lockett', position: 'WR', team: 'Seahawks', image:"./img/tyler.jpeg"},
 ];
 
-function PlayerList() {
+function PlayerList(Props) {
     return (
       <section className='column'>
         <TeamInfo teamName="Seahawks" coach="Pete Carroll" foundedYear={'1976'} />
