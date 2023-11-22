@@ -23,7 +23,7 @@ function App(props) { //props is an array of jsonObjs
               <li><button onClick={() => handleClick(<PlayerList players={props.data} />)}>Player List</button></li>
               <li><button onClick={() => handleClick(<Sort data={props.data} />)}>Fantasy</button></li>
               <li><button onClick={() => handleClick(<Homepage />)}>Home</button></li>
-              <li><button onClick={() => handleClick(<DivisionList teams={props.divisions}/>)}>Teams</button></li>
+              <li><button onClick={() => handleClick(<DivisionList teams={props.divisions}/>)}>Divisions</button></li>
             </ul>
           </nav>
           
