@@ -17,7 +17,6 @@ function Sort(props) {
  })
 
   const headerMap = headers.map((jsonKey, index) => {
-    console.log(jsonKey);
     return (
       <>
         <th>
@@ -72,12 +71,10 @@ function StatRow(statObj) {
   const renderStat = (statObj) => {
     return Object.entries(statObj).map(([key, value]) => {
       if (typeof value === 'object') {
-        // If the value is an object, recursively render its contents
         return (
           renderStat(value)
         );
       } else {
-        // If the value is not an object, render a single <td>
         return <td key={key}>{value}</td>;
       }
     });

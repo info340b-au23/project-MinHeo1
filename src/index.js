@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './css/style.css';
 import App from './Components/App';
 import data from './data/fantasy.json';
+import teams from './data/teamList.json'
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App data={data} />
+    <App data={data} divisions={teams.divisions} />
   </React.StrictMode>
 );
 
