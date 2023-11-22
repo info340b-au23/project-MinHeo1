@@ -3,10 +3,11 @@ import { useState } from 'react';
 import PlayerList from './PlayerList';
 import TeamInfo from './TeamInfo';
 import Sort from './Sort';
+import Homepage from './Homepage';
 
 
 function App(props) { //props is an array of jsonObjs
-  const [activeComponent, setActiveComponent] = useState(<PlayerList />);
+  const [activeComponent, setActiveComponent] = useState(<Homepage />);
 
   const handleClick = (component) => {
     setActiveComponent(component);
