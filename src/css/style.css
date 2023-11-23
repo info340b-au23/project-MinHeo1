@@ -7,6 +7,11 @@ h2 {
     text-align: center;
 }
 
+h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
 img {
     display: block;
     margin-left: auto;
@@ -18,7 +23,7 @@ body {
     margin: 0px 50px 50px 50px;
     padding: .5rem;
     font-family: "Times New Roman", Arial;
-    background-color: rgb(174, 229, 247);
+    background-color: rgb(215, 242, 250);
   }
 
 ul, li {
@@ -63,17 +68,26 @@ table {
     color:white;
 }
 
+.row {
+  justify-content: center;
+}
+
 th, td {
     padding: 0.5rem;
     padding-left: 1rem;
+    color: rgb(63, 131, 232);
 }
 
 thead {
-    background-color:#ddd;
+    background-color: darkgrey;
 }
 
-table tr:nth-child(even) {
-    background-color: #f27474;
+table, tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+table, tbody tr:nth-child(odd) {
+  background-color: white;
 }
 
 header {
@@ -185,10 +199,6 @@ div.player {
   background-color: white;
 }
 
-div.player p {
-  padding: 0.5rem 1rem;
-}
-
 div.header-content {
   text-align: center;
 }
@@ -208,6 +218,8 @@ div.searchbar {
   overflow: hidden;
   width: 300px;
   max-width: 100%;
+  text-align: center;
+  margin: 10px;
 }
 
 .card-image img {
