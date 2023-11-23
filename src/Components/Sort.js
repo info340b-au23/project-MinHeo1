@@ -1,33 +1,29 @@
 import React, {useState} from 'react';
-
 import _ from 'lodash';
 
 function Sort(props) {
+  const headers = ["Rk", "Player", "Tm", "FantPos", "Age", "Fantasy", "FantPt", "PPR", "DKPt", "FDPt", "VBD", "PosRank", "OvRank"];
   const [isAscending, setAscending] = useState(null);
   const [sortByCriteria, setCriteria] = useState(null);
 
   const sortedData = _.sortBy(props.data, sortByCriteria);
-  if ((isAscending !== null && isAscending === false)) {
+  if (isAscending !== null && isAscending === false) {
     _.reverse(sortedData);
   }
 
-  const headers = Object.keys(props.data[0]);
-  const statRows = props.data.map((jsonObj, index) => {
-  return <tr><StatRow statObj={jsonObj} key={index} /></tr>
- })
+  const statRows = sortedData.map((jsonObj, index) => (
+    <StatRow statObj={jsonObj} key={index}  />
+  ));
 
   const headerMap = headers.map((jsonKey, index) => {
     return (
-      <>
-        <th>
-          <SortButton 
-            onClick={SortButtonHanler}
-            key={index}
-            header={jsonKey}
-            ascending={sortByCriteria === jsonKey.Player && isAscending}
-          />
-        </th>
-      </>
+      <th key={index}>
+        <SortButton 
+          ascending={sortByCriteria === jsonKey && isAscending}
+          name={jsonKey}
+          onClick={SortButtonHandler}
+        />
+      </th>
     );
   })
 
@@ -46,7 +42,8 @@ function Sort(props) {
     </>
   );
 
-  function SortButtonHanler(event) {
+  function SortButtonHandler(event) {
+    console.log(event.currentTarget.name);
     const clickedButtonName = event.currentTarget.name;
     if (clickedButtonName !== sortByCriteria) {
       setCriteria(clickedButtonName);
@@ -62,8 +59,8 @@ function Sort(props) {
 
 function SortButton(props) {
   return (
-    <button className="btn btn-sm btn-sort" name={props.header} onClick={props.onClick}>
-    <span aria-label={`sort by ${props.header}`}>{props.header}</span>
+    <button className="btn btn-sm btn-sort" name={props.name} onClick={props.onClick}>
+    <span aria-label={`sort by ${props.name}`}>{props.name}</span>
     </button>
   );
 }
@@ -80,7 +77,7 @@ function StatRow(statObj) {
     });
   };
 
-  return renderStat(statObj);
+  return <tr>{renderStat(statObj)}</tr>
 }
 
 export default Sort;
