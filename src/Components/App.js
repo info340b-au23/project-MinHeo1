@@ -16,7 +16,7 @@ function App(props) { //props is an array of jsonObjs
 
   return (
     <header aria-label='navigation'>
-      <section className="navbar">
+      <section>
         <div>
           <nav className="main_nav">
             <ul>

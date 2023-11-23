@@ -18,7 +18,7 @@ body {
     margin: 0px 50px 50px 50px;
     padding: .5rem;
     font-family: "Times New Roman", Arial;
-    background-color: lightgray;
+    background-color: rgb(174, 229, 247);
   }
 
 ul, li {
@@ -28,24 +28,25 @@ ul, li {
 }
 
 nav.main_nav {
-    background-color: black;
+    /* background-color: black; */
     text-align: center; 
 }
 
 ul {
     display: flex;
-    background-color: black;
+    /* background-color: black; */
     justify-content: space-around;
     padding: 10px 0;
 }
 
 p {
     text-align: center;
+    color: black;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
@@ -59,7 +60,7 @@ table {
     margin-top: 2rem;
     width: 100%;
     border-collapse: collapse;
-    color:black;
+    color:white;
 }
 
 th, td {
@@ -72,14 +73,14 @@ thead {
 }
 
 table tr:nth-child(even) {
-    background-color: #ddd;
+    background-color: #f27474;
 }
 
 header {
     padding-left: 1rem;
     padding-bottom: 1rem;
-    color: white;
-    background-color: black;
+    color: black;
+    /* background-color: black; */
 }
 
 button {
