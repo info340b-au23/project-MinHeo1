@@ -4,6 +4,7 @@ import PlayerList from './PlayerList';
 import Sort from './Sort';
 import Homepage from './Homepage';
 import DivisionList from './DivisionList';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import TeamInfo from './TeamInfo';
 
 
@@ -15,38 +16,32 @@ function App(props) { //props is an array of jsonObjs
   };
 
   return (
-    <header aria-label='navigation'>
-      <section>
-        <div>
-          <nav className="main_nav">
-            <ul>
-              <li><button onClick={() => handleClick(<PlayerList players={props.data} />)}>Player List</button></li>
-              <li><button onClick={() => handleClick(<Sort data={props.data} />)}>Fantasy</button></li>
-              <li><button onClick={() => handleClick(<Homepage />)}>Home</button></li>
-              <li><button onClick={() => handleClick(<DivisionList teams={props.divisions}/>)}>Divisions</button></li>
-            </ul>
-          </nav>
-          
+    <Router>
+      <header aria-label='navigation'>
+        <section>
           <div>
-            {activeComponent}
+            <nav className="main_nav">
+              <ul>
+                <li><Link to="/players">Player List</Link></li>
+                <li><Link to="/fantasy">Fantasy</Link></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/divisions">Divisions</Link></li>
+              </ul>
+            </nav>
+            
+            <div>
+            <Routes>
+              <Route path="/players" element={<PlayerList players={props.data} />} />
+              <Route path="/fantasy" element={<Sort data={props.data} />} />
+              <Route path="/divisions" element={<DivisionList teams={props.divisions} />} />
+              <Route path="/" element={<Homepage />} />
+            </Routes>
+            </div>
           </div>
-        </div>
-      </section>
-    </header>
+        </section>
+      </header>
+    </Router>
   );
 }
   
 export default App;
-  
-
-    // const teamData = {
-    //   teamName: 'Seattle Seahawks',
-    //   coach: 'Pete Carroll',
-    //   foundedYear: '1976',
-    // };
-       // <div className="App">
-      //   <h1>Fantasy Football</h1>
-      //   <TeamInfo {...teamData} />
-      //   <PlayerList />
-      //   <Sort data={data} />
-      // </div>
