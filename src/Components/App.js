@@ -3,18 +3,12 @@ import { useState } from 'react';
 import PlayerList from './PlayerList';
 import Sort from './Sort';
 import Homepage from './Homepage';
+import Evaluation from './PlayerEval';
 import DivisionList from './DivisionList';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import TeamInfo from './TeamInfo';
 
 
 function App(props) { //props is an array of jsonObjs
-  const [activeComponent, setActiveComponent] = useState(<Homepage />);
-
-  const handleClick = (component) => {
-    setActiveComponent(component);
-  };
-
   return (
     <Router>
       <header aria-label='navigation'>
@@ -26,6 +20,7 @@ function App(props) { //props is an array of jsonObjs
                 <li><Link to="/fantasy">Fantasy</Link></li>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/divisions">Divisions</Link></li>
+                <li><Link to="/playerEval">Player Evaluation</Link></li>
               </ul>
             </nav>
             
@@ -34,6 +29,7 @@ function App(props) { //props is an array of jsonObjs
               <Route path="/players" element={<PlayerList players={props.data} />} />
               <Route path="/fantasy" element={<Sort data={props.data} />} />
               <Route path="/divisions" element={<DivisionList teams={props.divisions} />} />
+              <Route path="/playerEval" element={<Evaluation />} />
               <Route path="/" element={<Homepage />} />
             </Routes>
             </div>
