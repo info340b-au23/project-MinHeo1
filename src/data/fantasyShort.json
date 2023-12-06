@@ -521,24 +521,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "30",
       "Player": "Sam LaPorta",
@@ -1079,24 +1062,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "60",
       "Player": "Rashid Shaheed",
@@ -1637,24 +1603,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "90",
       "Player": "Geno Smith",
@@ -2195,24 +2144,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "120",
       "Player": "Saquon Barkley",
@@ -2753,24 +2685,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "150",
       "Player": "Nelson Agholor",
@@ -3311,24 +3226,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "180",
       "Player": "Darnell Mooney",
@@ -3869,24 +3767,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "210",
       "Player": "Tank Bigsby",
@@ -4427,24 +4308,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "240",
       "Player": "Durham Smythe",
@@ -4985,24 +4849,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "270",
       "Player": "D'Onta Foreman",
@@ -5543,24 +5390,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "300",
       "Player": "Nick Bawden",
@@ -6101,24 +5931,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "330",
       "Player": "Jeremy Ruckert",
@@ -6659,24 +6472,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "360",
       "Player": "Keith Smith",
@@ -7217,24 +7013,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "390",
       "Player": "Trevon Wesco",
@@ -7775,24 +7554,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "420",
       "Player": "Cody Thompson",
@@ -8333,24 +8095,7 @@
          }
       ]
    },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
-         }
-      ]
-   },
+   
     {
       "Rk": "450",
       "Player": "Reggie Gilliam",
@@ -8888,24 +8633,6 @@
             "VBD": "",
             "PosRank": "51",
             "OvRank": ""
-         }
-      ]
-   },
-    {
-      "Rk": "Rk",
-      "Player": "Player",
-      "Tm": "Tm",
-      "FantPos": "FantPos",
-      "Age": "Age",
-      "Fantasy": [
-         {
-            "FantPt": "FantPt",
-            "PPR": "PPR",
-            "DKPt": "DKPt",
-            "FDPt": "FDPt",
-            "VBD": "VBD",
-            "PosRank": "PosRank",
-            "OvRank": "OvRank"
          }
       ]
    },
