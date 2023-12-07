@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Quiz from "./Quiz"; // Import the Quiz component
 
-export default function Homepage() {
+const Homepage = () => {
+    const [showQuiz, setShowQuiz] = useState(false);
+    
+    const handleStartQuiz = () => {
+        setShowQuiz(true);
+    }; 
+
     return (
         <>
         <div className="row">
@@ -42,8 +49,22 @@ export default function Homepage() {
                     <div className="card-description">Clickable</div>
                 </div>
             </div>
+            <div className="card col-auto">
+                <div className="card-content">
+                    <div className="card-title">Fantasy Football Quiz</div>
+                    <div className="card-description">
+                      Discover your ideal player choices
+                    </div>
+                    {!showQuiz && (
+                        <button onClick={handleStartQuiz}>Start Quiz</button>
+                    )}
+                    {showQuiz && <Quiz />}
+                </div>
+            </div>  
         </div>
-        
+
         </>
-    )
-}
+    );
+};
+
+export default Homepage;
