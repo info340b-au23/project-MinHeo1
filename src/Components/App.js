@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 
 function App(props) { //props is an array of jsonObjs
+  
   return (
     <Router>
       <header aria-label='navigation'>
@@ -29,7 +30,7 @@ function App(props) { //props is an array of jsonObjs
               <Route path="/players" element={<PlayerList players={props.data} />} />
               <Route path="/fantasy" element={<Sort data={props.data} />} />
               <Route path="/divisions" element={<DivisionList teams={props.divisions} />} />
-              <Route path="/playerEval" element={<Evaluation />} />
+              <Route path="/playerEval" element={<Evaluation data={props.data} />} />
               <Route path="/" element={<Homepage />} />
             </Routes>
             </div>

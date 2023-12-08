@@ -244,6 +244,22 @@ div.searchbar {
   color: #555;
 }
 
+.player-dropdown {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.player-dropdown:empty {
+  border:none;
+}
+
+.player-dropdown-row {
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
 
 @media (max-width: 598px) {
     nav {
