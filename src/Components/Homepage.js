@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Quiz from "./Quiz"; // Import the Quiz component
+import Quiz from "./Quiz";
 
 const Homepage = () => {
     const [showQuiz, setShowQuiz] = useState(false);
