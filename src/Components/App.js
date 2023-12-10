@@ -1,5 +1,5 @@
 import React from 'react'; 
-import PlayerList from './PlayerList';
+import PlayerCard from './PlayerCard';
 import Sort from './Sort';
 import Homepage from './Homepage';
 import Evaluation from './PlayerEval';
@@ -14,7 +14,7 @@ function App(props) {
     <Router>
       <Header />
       <Routes>
-        <Route path="/players" element={<PlayerList players={props.data} />} />
+        <Route path="/players" element={<PlayerCard players={props.data} />} />
         <Route path="/fantasy" element={<Sort data={props.data} />} />
         <Route path="/divisions" element={<DivisionList teams={props.divisions} />} />
         <Route path="/playerEval" element={<Evaluation data={props.data} />} />
