@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import _ from 'lodash';
 
 function Sort(props) {
-  const headers = ["Rk", "Player", "Tm", "FantPos", "Age", "Fantasy", "FantPt", "PPR", "DKPt", "FDPt", "VBD", "PosRank", "OvRank"];
+  const headers = ["Rk", "Player", "Tm", "FantPos", "Age", "Fantasy", "FantPt", "PPR", "DKPt", "FDPt", "PosRank"];
   const [isAscending, setAscending] = useState(null);
   const [sortByCriteria, setCriteria] = useState(null);
 
