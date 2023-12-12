@@ -7,118 +7,134 @@ export default function Evaluation(props) {
   const players = props.data;
   const [playerOne, setplayerOne] = useState('');
   const [playerTwo, setPlayerTwo] = useState('');
+  const [playerOneStats, setPlayerOneStats] = useState(null);
+  const [playerTwoStats, setPlayerTwoStats] = useState(null);
   const [showErrorGive, setShowErrorGive] = useState(false);
   const [showErrorReceive, setShowErrorReceive] = useState(false);
   const [eligibleTrade, setEligibleTrade] = useState(false);
   const [makeTrade, setMakeTrade] = useState(false);
 
+  const filterPlayers = (searchTerm) => {
+    return players.filter(player =>
+      player.Player.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  };
+
+
   const handlePlayerOneChange = (e) => {
-    console.log(e.target.value)
     setplayerOne(e.target.value);
   }
-
   const handlePlayerTwoChange = (e) => {
-    console.log(e.target.value)
     setPlayerTwo(e.target.value);
   }
 
+  const findPlayerByName = (playerName) => {
+    return players.find(
+      (data) => data.Player.toLowerCase() === playerName.toLowerCase()
+    );
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowErrorGive(false);
     setShowErrorReceive(false);
     setEligibleTrade(false);
     setMakeTrade(false);
-  
-    const playerToGiveObject = findPlayerByName(playerOne);
-    const playerToReceiveObject = findPlayerByName(playerTwo);
-  
-    if (!playerToGiveObject) {
+
+    const playerOneData = findPlayerByName(playerOne);
+    const playerTwoData = findPlayerByName(playerTwo);
+
+    if (!playerOneData) {
       setShowErrorGive(true);
       return;
     }
-    if (!playerToReceiveObject) {
+    if (!playerTwoData) {
       setShowErrorReceive(true);
       return;
     }
-  
+
     setEligibleTrade(true);
-    const playerToGiveFantasyPoints = parseFloat(playerToGiveObject.Fantasy[0].FantPt);
-    const playerToReceiveFantasyPoints = parseFloat(playerToReceiveObject.Fantasy[0].FantPt);
-  
+    const playerToGiveFantasyPoints = parseFloat(playerOneData.Fantasy[0].FantPt);
+    const playerToReceiveFantasyPoints = parseFloat(playerTwoData.Fantasy[0].FantPt);
+
     if (playerToReceiveFantasyPoints > playerToGiveFantasyPoints) {
       setMakeTrade(true);
     }
-  
-    console.log("Player to give:", playerToGiveObject.Player, "Fantasy Points:", playerToGiveFantasyPoints);
-    console.log("Player to receive:", playerToReceiveObject.Player, "Fantasy Points:", playerToReceiveFantasyPoints);
-  };
-  
-  const findPlayerByName = (playerName) => players.find(
-    (data) => data.Player.toLowerCase() === playerName.toLowerCase()
-  );
-  
-	return (
-    <div>
 
-      {showErrorGive && (
-        <Alert variant="warning">Please enter a valid player to give!</Alert>
-      )}
-      {showErrorReceive && (
-        <Alert variant="warning">Please enter a valid player to receive!</Alert>
-      )}
-      {(() => {
-        if (eligibleTrade && makeTrade) {
-          return <Alert show={eligibleTrade} variant="success">Make this Trade!</Alert>;
-        } else {
-          return <Alert show={eligibleTrade} variant="danger">Dont make this trade!</Alert>;
-        }
-      })()}
+    setPlayerOneStats(playerOneData);
+    setPlayerTwoStats(playerTwoData);
+  };
+
+  const renderStats = (player) => {
+    if (!player) return null;
+
+    return (
+      <div className="player-stats">
+        <h3>{player.Player}'s Stats</h3>
+        <table className="stats-table">
+          <tbody>
+            {Object.entries(player).map(([key, value]) => (
+              <tr key={key}>
+                <th>{key}</th>
+                <td>{JSON.stringify(value)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      {showErrorGive && <Alert variant="warning">Please enter a valid player to give!</Alert>}
+      {showErrorReceive && <Alert variant="warning">Please enter a valid player to receive!</Alert>}
+      {eligibleTrade && (makeTrade
+        ? <Alert variant="success">Make this Trade!</Alert>
+        : <Alert variant="danger">Don't make this trade!</Alert>)}
 
       <Form onSubmit={handleSubmit}>
         <Row className="align-items-center">
-          <Col className="my-5" >
+          <Col className="my-5">
             <Form.Label>Player to Give</Form.Label>
-            <Form.Control 
+            <Form.Control
               type="text"
               value={playerOne}
               onChange={handlePlayerOneChange}
               placeholder="Enter Player Name" />
+            {playerOne && (
               <div className="player-dropdown">
-                {
-                  players.filter(data => {
-                    const searchTerm = playerOne.toLowerCase(); // text typed into form
-                    const playerName = data.Player.toLowerCase(); // player name from json
-                    return searchTerm && playerName.startsWith(searchTerm);
-                  })
-                  .map((data) => 
-                    <div className="player-dropdown-row" key={data.Player}> 
-                      {data.Player}
-                    </div>
-                  )
-                }
+                {filterPlayers(playerOne).map(player => (
+                  <div
+                    className="player-dropdown-row"
+                    key={player.Player}
+                    onClick={() => setplayerOne(player.Player)}
+                  >
+                    {player.Player}
+                  </div>
+                ))}
               </div>
+            )}
           </Col>
           <Col className="my-5">
-            <Form.Label className="text-center">Player to Recieve</Form.Label>
-            <Form.Control 
+            <Form.Label>Player to Receive</Form.Label>
+            <Form.Control
               type="text"
               value={playerTwo}
               onChange={handlePlayerTwoChange}
               placeholder="Enter Player Name" />
+            {playerTwo && (
               <div className="player-dropdown">
-                {
-                  players.filter(data => {
-                    const searchTerm = playerTwo.toLowerCase();
-                    const playerName = data.Player.toLowerCase();
-                    return searchTerm && playerName.startsWith(searchTerm);
-                })
-                .map((data) => 
-                  <div className="player-dropdown-row" key={data.Player}> 
-                    {data.Player}
+                {filterPlayers(playerTwo).map(player => (
+                  <div
+                    className="player-dropdown-row"
+                    key={player.Player}
+                    onClick={() => setPlayerTwo(player.Player)}
+                  >
+                    {player.Player}
                   </div>
-                  )
-                }
+                ))}
               </div>
+            )}
           </Col>
         </Row>
         <Row>
@@ -129,6 +145,11 @@ export default function Evaluation(props) {
           </Col>
         </Row>
       </Form>
+
+      <div className="player-stats-container">
+        {renderStats(playerOneStats)}
+        {renderStats(playerTwoStats)}
+      </div>
     </div>
   );
 }
