@@ -298,3 +298,31 @@ div.searchbar {
         font-size: 3rem;
     }
 }
+
+.player-stats {
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats-table th, .stats-table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.stats-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.stats-table tr:hover {
+  background-color: #f2f2f2;
+}
