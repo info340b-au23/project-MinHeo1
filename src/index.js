@@ -5,8 +5,6 @@ import App from './Components/App';
 import data from './data/fantasyShort.json';
 import teams from './data/teamList.json'
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
