@@ -14,11 +14,11 @@ function App(props) {
     <Router>
       <Header />
       <Routes>
+        <Route index element={<Homepage />} />
         <Route path="/players" element={<PlayerCard players={props.data} />} />
         <Route path="/fantasy" element={<Sort data={props.data} />} />
         <Route path="/divisions" element={<DivisionList teams={props.divisions} />} />
         <Route path="/playerEval" element={<Evaluation data={props.data} />} />
-        <Route path="/" element={<Homepage />} />
       </Routes>
       <Footer />
     </Router>
