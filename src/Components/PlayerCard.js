@@ -59,7 +59,7 @@ function PlayerCard({ players }) {
   return (
     <div className="player-card">
       <div>
-        <label htmlFor="playerSearch">Search for a Player:</label>
+        <label>Search for a Player:</label>
         <input
           id="playerSearch"
           type="text"
@@ -71,7 +71,7 @@ function PlayerCard({ players }) {
 
       {filteredPlayers.length > 0 && (
         <div>
-          <label htmlFor="playerDropdown">Select a Player:</label>
+          <label>Select a Player:</label>
           <select id="playerDropdown" onChange={handlePlayerChange}>
             <option value="">Select a player</option>
             {filteredPlayers.map(player => (

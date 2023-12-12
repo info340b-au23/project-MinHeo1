@@ -11,7 +11,6 @@ export default function DivisionList(props) {
         <div className="card-content">
           <div className="card-title">{divisionCards.name}</div>
           <div className="card-description">
-            Click to see the teams of {divisionCards.name}
           </div>
         </div>
       </div>
