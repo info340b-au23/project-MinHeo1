@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [showStats, setShowStats] = useState(false);
 
   const questions = [
     {
@@ -19,27 +20,92 @@ const Quiz = () => {
     },
   ];
 
+  const dkMetcalfStats = {
+    Rk: '103',
+    Player: 'D.K. Metcalf',
+    Tm: 'SEA',
+    FantPos: 'WR',
+    Age: '26',
+    Fantasy: [
+      {
+        FantPt: '46',
+        PPR: '67.7',
+        DKPt: '70.7',
+        FDPt: '56.7',
+        PosRank: '33',
+      },
+    ],
+  };
+
+  const renderStatsTable = (player) => {
+    return (
+      <table>
+        <tbody>
+          {Object.entries(player).map(([key, value]) => (
+            <tr key={key}>
+              <td>{key}</td>
+              <td>
+                {typeof value === 'object' ? (
+                  key !== 'Fantasy' ? (
+                    <table>
+                      <tbody>
+                        {value[0] &&
+                          Object.entries(value[0]).map(([nestedKey, nestedValue]) => (
+                            <tr key={nestedKey}>
+                              <td>{nestedKey}</td>
+                              <td>
+                                {typeof nestedValue === 'object' ? (
+                                  JSON.stringify(nestedValue)
+                                ) : (
+                                  nestedValue
+                                )}
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  ) : (
+                    <pre>{JSON.stringify(value[0], null, 2)}</pre>
+                  )
+                ) : (
+                  value
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  };
+
   const handleAnswer = (answer) => {
     setAnswers([...answers, answer]);
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      const result = calculateResult(answers);
-      console.log('Quiz completed. Result:', result);
+      checkCriteria(answers);
     }
   };
 
-  const calculateResult = (answers) => {
-    let result = 'Balanced team';
-    if (answers.includes('Quarterback') && answers.includes('Wide Receiver')) {
-      result = 'Pass-heavy strategy';
-    } else if (answers.includes('Running Back')) {
-      result = 'Run-heavy strategy';
+  const checkCriteria = (answers) => {
+    const hasWideReceiver = answers.includes('Wide Receiver');
+    const isAggressive = answers.includes('Aggressive');
+    const isSeahawksFan = answers.includes('Seattle Seahawks');
+
+    if (hasWideReceiver && isAggressive && isSeahawksFan) {
+      setShowStats(true);
     }
-    if (answers.includes('Aggressive') && answers.includes('Seattle Seahawks')) {
-      result = 'Aggressive with Seahawks fan';
-    }
-    return result;
+  };
+
+  const showStatsOrInfo = () => {
+    if (showStats) {
+      return (
+        <div>
+          <h3>D.K. Metcalf's Stats</h3>
+          {renderStatsTable(dkMetcalfStats)}
+        </div>
+      );
+    } 
   };
 
   return (
@@ -56,6 +122,7 @@ const Quiz = () => {
           </ul>
         </div>
       )}
+      {showStatsOrInfo()}
     </div>
   );
 };
